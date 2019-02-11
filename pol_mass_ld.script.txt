@@ -1,11 +1,6 @@
-cat pol_contig_list.txt | while read c
+cat Pol_headered_list.txt | while read h 
 do
-        echo "Working on $c scaffold"
-        for ((i=0; i<=100000000; i+=100000))
-        do
-                a=$(( ${i} + 100000 ))
-                vcftools --vcf /home/taeyoon/VcfFiles/LdByWindow/WindowedPol/${c}_${i}_header.vcf --hap-r2 --ld-window-bp 40 --out ld_${c}_${i}
+        echo "Working on $h"
+        vcftools --vcf /data3/TaeFile/Pol_HeaderedVcf/${h} --geno-r2 --ld-window-bp 60 --out /data3/TaeFile/Pol_WindowedLdFiles/${h}
 	done
 done
-		
- 
