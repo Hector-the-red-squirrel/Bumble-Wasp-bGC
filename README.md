@@ -6,7 +6,7 @@ Taeyoon You - honours thesis project
 biased GC gene conversion testing in B.impatiens and P.dominula
 Duration: Sept 2018 - March 2019
 
-Chopped LD - Polistes.ipynb 
+Chopped LD - Polistes.ipynb   
 is a example file of analysis done on Polistes.
 Same codes were used for B.impatiens, was copy&pasted and non-essential lines were removed for P.dominula.
 
