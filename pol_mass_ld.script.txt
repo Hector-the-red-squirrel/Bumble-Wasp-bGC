@@ -1,0 +1,11 @@
+cat pol_contig_list.txt | while read c
+do
+        echo "Working on $c scaffold"
+        for ((i=0; i<=100000000; i+=100000))
+        do
+                a=$(( ${i} + 100000 ))
+                vcftools --vcf /home/taeyoon/VcfFiles/LdByWindow/WindowedPol/${c}_${i}_header.vcf --hap-r2 --ld-window-bp 40 --out ld_${c}_${i}
+	done
+done
+		
+ 

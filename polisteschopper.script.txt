@@ -1,0 +1,10 @@
+cat pol_contig_list.txt | while read c
+do
+        echo "Working on $c scaffold"
+        for ((i=0; i<=100000000; i+=100000))
+        do
+                a=$(( ${i} + 100000 ))
+                tabix polistes-snps.vcf.gz $c:$i-$a > /home/taeyoon/VcfFiles/LdByWindow/WindowedPol/${c}_${i}.vcf
+                cat polistes_header.vcf /home/taeyoon/VcfFiles/LdByWindow/WindowedPol/${c}_${i}.vcf > /home/taeyoon/VcfFiles/LdByWindow/WindowedPol/${c}_${i}_headered.vcf
+        done
+done
